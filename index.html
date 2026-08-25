@@ -5,86 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toledo Café & Beach</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body, html {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #0d0d0d;
-        }
-
-        /* شاشة الترحيب */
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body {
+            height: 100vh;
             background: linear-gradient(135deg, #1a1a1a 0%, #080808 100%);
             color: #d4af37;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 99999;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
             text-align: center;
-            padding: 20px;
         }
-
-        #splash-screen h1 {
-            font-size: 3rem;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
-            font-weight: bold;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-        }
-
-        #splash-screen p {
-            font-size: 1.2rem;
-            color: #ffffff;
-            letter-spacing: 1px;
-            opacity: 0.85;
-        }
-
-        .splash-hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        #site-frame {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+        h1 { font-size: 3rem; letter-spacing: 3px; margin-bottom: 10px; }
+        p { font-size: 1.2rem; color: #fff; opacity: 0.85; }
     </style>
 </head>
 <body>
 
-    <!-- الشاشة الترحيبية -->
-    <div id="splash-screen">
+    <div>
         <h1>TOLEDO</h1>
         <p>Designed by Amr Meshmesh</p>
     </div>
 
-    <!-- عرض موقعك الحالي -->
-    <iframe id="site-frame" src="https://sites.google.com/view/toledo-cafe/home"></iframe>
-
     <script>
-        // إخفاء الشاشة الترحيبية بعد 3 ثواني
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const splash = document.getElementById('splash-screen');
-                splash.classList.add('splash-hidden');
-                document.body.style.overflow = 'auto';
-            }, 3000);
-        });
+        // بعد 3 ثواني بيحوله فوراً على لينك المنيو الأصلي
+        setTimeout(() => {
+            window.location.href = "https://sites.google.com/view/toledo-cafe/home";
+        }, 3000);
     </script>
 </body>
 </html>
