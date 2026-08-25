@@ -16,6 +16,7 @@
             align-items: center;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
         }
         h1 { font-size: 3rem; letter-spacing: 3px; margin-bottom: 10px; }
         p { font-size: 1.2rem; color: #fff; opacity: 0.85; }
@@ -29,10 +30,12 @@
     </div>
 
     <script>
-        // تحويل تلقائي بعد 3 ثواني مباشرة
-        setTimeout(function() {
-            window.location.replace("https://sites.google.com/view/toledo-cafe/home");
-        }, 3000);
+        function redirectToMenu() {
+            window.location.href = "https://sites.google.com/view/toledo-cafe/home";
+        }
+
+        // تحويل بعد ثانيتين ونصف
+        setTimeout(redirectToMenu, 2500);
     </script>
 </body>
 </html>
